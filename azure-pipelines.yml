@@ -8,6 +8,7 @@ steps:
       gradleWrapperFile: '$(System.DefaultWorkingDirectory)/gradlew'
       workingDirectory: '$(System.DefaultWorkingDirectory)'
       tasks: 'test'
+      codeCoverage: 'jacoco'
       publishJUnitResults: true
       testResultsFiles: '**/customJacocoReportDir/TEST-*.html'
       javaHomeOption: 'JDKVersion'
