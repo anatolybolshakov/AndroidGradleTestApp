@@ -55,11 +55,11 @@ jacocoTestReport {
     dependsOn test // tests are required to run before generating the report
 }
 jacocoTestReport {
-    //reports {
+    reports {
         //xml.enabled true
         //csv.enabled false
-        //html.destination file("${buildDir}/jacocoHtml")
-    //}
+        html.destination file("${buildDir}/jacocoHtml")
+    }
     //dependsOn(test)
 
     reports {
@@ -74,5 +74,5 @@ jacocoTestReport {
 }
 jacoco {
     toolVersion = "0.8.5"
-    reportsDir = file("$buildDir/customJacocoReportDir")
+    reportsDir = file("$buildDir/jacocoHtml")
 }
