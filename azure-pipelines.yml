@@ -10,7 +10,12 @@ steps:
       tasks: 'test'
       publishJUnitResults: true
       testResultsFiles: '**/TEST-*.html'
-      codeCoverageToolOption: 'JaCoCo'
       javaHomeOption: 'JDKVersion'
       jdkVersionOption: '1.8'
       sonarQubeRunAnalysis: false
+
+  - task: PublishCodeCoverageResults@1
+    inputs:
+      codeCoverageTool: 'JaCoCo'
+      summaryFileLocation: '$(Build.SourcesDirectory)/build/reports/jacoco/test/jacocoTestReport.xml'
+      reportDirectory: '$(Build.SourcesDirectory)/build/reports/jacoco/test/html'
