@@ -6,9 +6,8 @@ steps:
    - task: Gradle@2
      displayName: 'gradlew wrapper'
      inputs:
-      gradleWrapperFile: android/gradlew.bat
+      gradleWrapperFile: 'gradlew'
       workingDirectory: android 
       tasks: wrapper
       options: '--gradle-version 6.3'
       publishJUnitResults: false
-
