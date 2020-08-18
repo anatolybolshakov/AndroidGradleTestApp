@@ -6,4 +6,4 @@ steps:
 
   - task: CmdLine@2
     inputs:
-     script: '$(System.DefaultWorkingDirectory)/gradlew wrapper --gradle-version 6.3'
+     script: 'gradlew wrapper --gradle-version 6.3'
