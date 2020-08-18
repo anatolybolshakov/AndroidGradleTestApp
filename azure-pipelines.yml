@@ -1,9 +1,8 @@
 trigger:
 - master
 pool:
-  vmImage: "ubuntu-latest"
+  vmImage: "windows-latest"
 steps:
-- task: Bash@3
-  inputs:
-    targetType: 'inline'
-    script: '$(System.DefaultWorkingDirectory)/gradlew wrapper --gradle-version 6.3'
+    - task: CmdLine@2
+      inputs:
+        script: '$(System.DefaultWorkingDirectory)/gradlew wrapper --gradle-version 6.3'
