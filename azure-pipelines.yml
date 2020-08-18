@@ -3,6 +3,11 @@ trigger:
 pool:
   vmImage: "windows-latest"
 steps:
-    - task: CmdLine@2
-      inputs:
-        script: '$(System.DefaultWorkingDirectory)/gradlew wrapper --gradle-version 6.2.1'
+ - task: Gradle@2
+   inputs:
+     gradleWrapperFile: 'gradlew'
+     tasks: 'build'
+     publishJUnitResults: true
+     testResultsFiles: '**/TEST-*.xml'
+     javaHomeOption: 'JDKVersion'
+     sonarQubeRunAnalysis: false
