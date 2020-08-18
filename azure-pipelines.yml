@@ -4,6 +4,12 @@ pool:
   vmImage: "ubuntu-latest"
 steps:
 
-  - task: CmdLine@2
-    inputs:
-     script: 'gradlew wrapper --gradle-version 6.3'
+- task: Gradle@2
+  inputs:
+    gradleWrapperFile: 'gradlew'
+    options: '--gradle-version 6.3'
+    tasks: 'wrapper'
+    publishJUnitResults: true
+    testResultsFiles: '**/TEST-*.xml'
+    javaHomeOption: 'JDKVersion'
+    sonarQubeRunAnalysis: false
