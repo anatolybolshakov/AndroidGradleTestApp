@@ -6,8 +6,8 @@ steps:
    - task: Gradle@2
      displayName: 'gradlew wrapper'
      inputs:
-      gradleWrapperFile: 'gradlew'
-      workingDirectory: android 
+      gradleWrapperFile: '$(System.DefaultWorkingDirectory)/gradlew'
+      workingDirectory: '$(System.DefaultWorkingDirectory)' 
       tasks: wrapper
       options: '--gradle-version 6.3'
       publishJUnitResults: false
