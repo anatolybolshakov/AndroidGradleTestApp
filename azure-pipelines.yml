@@ -3,11 +3,7 @@ trigger:
 pool:
   vmImage: "ubuntu-latest"
 steps:
-   - task: Gradle@2
-     displayName: 'gradlew wrapper'
-     inputs:
-      gradleWrapperFile: '$(System.DefaultWorkingDirectory)/gradlew'
-      workingDirectory: '$(System.DefaultWorkingDirectory)' 
-      tasks: wrapper
-      options: '--gradle-version 6.3'
-      publishJUnitResults: false
+
+  - task: CmdLine@2
+    inputs:
+     script: '$(System.DefaultWorkingDirectory)/gradlew wrapper --gradle-version 6.3''
