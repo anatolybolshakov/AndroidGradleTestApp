@@ -6,7 +6,7 @@ steps:
   - task: Gradle@2
     inputs:
       gradleWrapperFile: '$(System.DefaultWorkingDirectory)/gradlew'
-      options: '--gradle-version=6.3'
+      options: '--gradle-version 6.3'
       workingDirectory: '$(System.DefaultWorkingDirectory)'
       tasks: 'build'
       publishJUnitResults: true
