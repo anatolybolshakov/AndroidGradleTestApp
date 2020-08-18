@@ -3,14 +3,12 @@ trigger:
 pool:
   vmImage: "ubuntu-latest"
 steps:
-  - task: Gradle@2
-    inputs:
-      gradleWrapperFile: '$(System.DefaultWorkingDirectory)/gradlew'
+   - task: Gradle@2
+     displayName: 'gradlew wrapper'
+     inputs:
+      gradleWrapperFile: android/gradlew.bat
+      workingDirectory: android 
+      tasks: wrapper
       options: '--gradle-version 6.3'
-      workingDirectory: '$(System.DefaultWorkingDirectory)'
-      tasks: 'build'
-      publishJUnitResults: true
-      testResultsFiles: '**/customJacocoReportDir/TEST-*.html'
-      javaHomeOption: 'JDKVersion'
-      jdkVersionOption: '1.8'
-      sonarQubeRunAnalysis: false
+      publishJUnitResults: false
+
