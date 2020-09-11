@@ -8,7 +8,7 @@ steps:
     versionSpec: '11'
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
-
+    cleanDestinationDirectory: false
 - task: Gradle@2
   inputs:
     gradleWrapperFile: 'gradlew'
