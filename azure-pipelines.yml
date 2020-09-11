@@ -18,4 +18,5 @@ steps:
     javaHomeOption: 'JDKVersion'
     jdkVersionOption: '1.11'
     sonarQubeRunAnalysis: false
+    options: '--stacktrace'
     codeCoverageToolOption: 'JaCoCo'
