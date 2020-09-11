@@ -6,13 +6,12 @@ steps:
 - task: JavaToolInstallerDTStest@0
   inputs:
     versionSpec: '11'
-    cleanDestinationDirectory: true
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
 
 - task: Gradle@2
   inputs:
-    gradleWrapperFile: '$(System.DefaultWorkingDirectory)/gradlew'
+    gradleWrapperFile: 'gradlew'
     tasks: 'build'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
