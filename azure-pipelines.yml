@@ -12,7 +12,7 @@ steps:
 - task: GradleJacocoTestFinal@2
   inputs:
     gradleWrapperFile: 'gradlew'
-    tasks: 'build test'
+    tasks: 'build'
     publishJUnitResults: true
     testResultsFiles: '**/TEST-*.xml'
     javaHomeOption: 'JDKVersion'
