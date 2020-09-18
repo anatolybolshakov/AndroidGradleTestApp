@@ -1,5 +1,6 @@
+
 dependencies {
-    testImplementation 'junit:junit:4.13'
+    testCompile 'junit:junit:4.13'
 }
 
 test {
