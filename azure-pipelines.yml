@@ -9,7 +9,7 @@ steps:
     jdkArchitectureOption: 'x64'
     jdkSourceOption: 'PreInstalled'
     cleanDestinationDirectory: false
-- task: GradleJacocoTestFinal@2
+- task: GradleTestCoverage@2
   inputs:
     gradleWrapperFile: 'gradlew'
     tasks: 'build'
