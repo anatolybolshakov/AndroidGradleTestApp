@@ -10,7 +10,9 @@ sourceSets {
       }
     }
 }
-
+subprojects {
+     apply plugin: 'java'
+}
 buildscript {
     apply plugin: 'java'
     apply plugin: 'jacoco'
