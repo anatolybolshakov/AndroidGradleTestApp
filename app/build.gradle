@@ -8,6 +8,6 @@ test {
     useJUnit()
     filter {
      //include all tests from package
-     includeTestsMatching "org.gradle.internal.*"
+     includeTestsMatching "solutions.s4y.androidempty.*"
     }
 }
