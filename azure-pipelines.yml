@@ -20,3 +20,5 @@ steps:
     sonarQubeRunAnalysis: false
     options: '--stacktrace'
     codeCoverageToolOption: 'JaCoCo'
+    codeCoverageClassFilesDirectories: 'build/classes/java/main/'
+    codeCoverageFailIfEmpty: true
