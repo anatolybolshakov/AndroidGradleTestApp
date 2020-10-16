@@ -3,13 +3,8 @@ trigger:
 pool:
   vmImage: "windows-latest"
 steps:
-- task: JavaToolInstallerDTStest@0
-  inputs:
-    versionSpec: '11'
-    jdkArchitectureOption: 'x64'
-    jdkSourceOption: 'PreInstalled'
-    cleanDestinationDirectory: false
-- task: GradleTestCoverage@2
+
+- task: Gradle@2
   inputs:
     gradleWrapperFile: 'gradlew'
     tasks: 'build'
