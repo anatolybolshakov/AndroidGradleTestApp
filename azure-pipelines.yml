@@ -4,7 +4,7 @@ pool:
   vmImage: "windows-latest"
 steps:
 
-- task: Gradle@2
+- task: GradleJacocoPackageUpdateTest@2
   inputs:
     gradleWrapperFile: 'gradlew'
     tasks: 'build'
@@ -14,6 +14,3 @@ steps:
     jdkVersionOption: '1.11'
     sonarQubeRunAnalysis: false
     options: '--stacktrace'
-    codeCoverageToolOption: 'JaCoCo'
-    codeCoverageClassFilesDirectories: 'build/classes/java/main/'
-    codeCoverageFailIfEmpty: true
